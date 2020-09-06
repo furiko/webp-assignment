@@ -74,7 +74,7 @@ def get_data(src):
         src) if not pic.name.startswith(".")]
     return pics
 
-
+# webpのコマンド実行。他の圧縮方法の場合はここを変える。
 def cwebp(t):
     subprocess.run(["cwebp", "-q", str(t.quality), src +
                     t.orign_name, "-o", dest+str(t.quality)+"/"+t.output_file])
